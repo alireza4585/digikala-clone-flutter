@@ -89,15 +89,18 @@ class Main_page extends StatelessWidget {
       child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(children: [
-            getpost(image: 'کوله', Price: 120000, name: 'کوله پشتی '),
-            getpost(image: 'الکل', Price: 14000, name: 'الکل ضد افونی کننده'),
-            getpost(image: 'تیشرت', Price: 155000, name: 'تیشرت مردانه زیبا'),
+            getpost(image: 'کوله', Price: '120,000', name: 'کوله پشتی '),
+            getpost(
+                image: 'الکل', Price: '14,000', name: 'الکل ضد عفونی کننده'),
+            getpost(
+                image: 'تیشرت', Price: '155,000', name: 'تیشرت مردانه زیبا'),
             SizedBox(
               width: 20,
             ),
             Container(
               color: Colors.red,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(padding: EdgeInsets.only(top: 15)),
                   Text(
@@ -123,6 +126,12 @@ class Main_page extends StatelessWidget {
                         fontSize: 22,
                         fontWeight: FontWeight.bold),
                   ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: 150,
+                    height: 150,
+                    child: Image(image: AssetImage('images/purr-box.png')),
+                  )
                 ],
               ),
             ),

@@ -13,6 +13,7 @@ Widget getpost({required var image, required var Price, required var name}) {
             alignment: Alignment.topCenter,
             child: Image(image: AssetImage('images/$image.jpg')),
           ),
+          SizedBox(height: 15),
           Text(
             '$name',
             style: TextStyle(
@@ -25,6 +26,15 @@ Widget getpost({required var image, required var Price, required var name}) {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              Text(
+                'تومان',
+                style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                    fontFamily: 'vazir'),
+              ),
+              SizedBox(width: 7),
               Text(
                 '$Price',
                 style: TextStyle(
