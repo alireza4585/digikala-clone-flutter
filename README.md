@@ -1,4 +1,4 @@
-# digikala colne
+# digikala clone
 
 in this project i try to build digikala colne amateur
 
