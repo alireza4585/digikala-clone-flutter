@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'vazir'),
       home: Scaffold(
         appBar: _getappbar(),
         body: SafeArea(child: _getcolum()),
@@ -75,8 +76,13 @@ class MyApp extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          SizedBox(height: 20),
+          SizedBox(height: 12),
+          _broshor(),
+          SizedBox(height: 12),
+          _icons(),
+          SizedBox(height: 12),
           _amazing(),
+          _icon2()
         ],
       ),
     );
@@ -87,25 +93,34 @@ class MyApp extends StatelessWidget {
     return Container(
       width: double.infinity,
       height:
-          500, ///////////////////////////////////////////////////////////////////
+          200, ///////////////////////////////////////////////////////////////////
       alignment: Alignment.centerRight,
       color: Colors.red,
       child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(children: <Widget>[
             for (var i in list)
-              Card(
-                child: Column(
-                  children: [
-                    Container(
-                      width: 300,
-                      height: 150,
-                      padding: EdgeInsets.only(top: 10),
-                      alignment: Alignment.topCenter,
-                      child: Image(image: AssetImage('images/$i.jpg')),
-                    ),
-                    Text('$i'),
-                  ],
+              TextButton(
+                onPressed: () {},
+                child: Card(
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 150,
+                        padding: EdgeInsets.only(top: 10),
+                        alignment: Alignment.topCenter,
+                        child: Image(image: AssetImage('images/$i.jpg')),
+                      ),
+                      Text(
+                        '$i',
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: 'vazir'),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             SizedBox(
@@ -115,12 +130,12 @@ class MyApp extends StatelessWidget {
               color: Colors.red,
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(top: 7)),
+                  Padding(padding: EdgeInsets.only(top: 15)),
                   Text(
                     'پیشنهاد',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
@@ -128,7 +143,7 @@ class MyApp extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
@@ -136,13 +151,86 @@ class MyApp extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 22,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
             ),
           ])),
+    );
+  }
+
+  Widget _broshor() {
+    var lista = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          for (var i in lista)
+            Card(
+              child: Expanded(
+                child: Container(
+                  height: 120,
+                  child: Image(image: AssetImage('images/$i')),
+                ),
+              ),
+            )
+        ],
+      ),
+    );
+  }
+
+  Widget _icons() {
+    var list = ['i1', 'i2', 'i3', 'i4', 'i5', 'i6', 'i3', 'i4'];
+    return Wrap(
+      alignment: WrapAlignment.end,
+      runSpacing: 15,
+      spacing: 26,
+      children: [
+        for (var i in list)
+          Card(
+            child: Container(
+              width: 60,
+              height: 60,
+              child: Image(
+                image: AssetImage('images/$i.png'),
+              ),
+            ),
+          )
+      ],
+    );
+  }
+
+  Widget _icon2() {
+    var list = ['r1.jpg', 'r2.jpg', 'r3.jpg', 'r4.gif'];
+    return Wrap(
+      spacing: 20,
+      children: [
+        for (var i in list)
+          Card(
+            child: Container(
+              width: 175,
+              height: 175,
+              child: Image(image: AssetImage('images/$i')),
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class mahsol extends StatelessWidget {
+  const mahsol({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          ),
+      ),
     );
   }
 }
