@@ -89,9 +89,9 @@ class Main_page extends StatelessWidget {
       child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(children: [
-            getpost(image: 'کوله', Price: 125, name: 'کوله پشتی '),
-            getpost(image: 'کوله', Price: 125, name: 'کوله پشتی '),
-            getpost(image: 'کوله', Price: 125000, name: 'کوله پشتی '),
+            getpost(image: 'کوله', Price: 120000, name: 'کوله پشتی '),
+            getpost(image: 'الکل', Price: 14000, name: 'الکل ضد افونی کننده'),
+            getpost(image: 'تیشرت', Price: 155000, name: 'تیشرت مردانه زیبا'),
             SizedBox(
               width: 20,
             ),
