@@ -1,4 +1,4 @@
-import 'package:digikala/custom_widget/post_amazing.dart';
+import 'package:digikala/widgets/post_amazing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -91,7 +91,10 @@ class Main_page extends StatelessWidget {
           child: Row(children: [
             getpost(image: 'کوله', Price: '120,000', name: 'کوله پشتی '),
             getpost(
-                image: 'الکل', Price: '14,000', name: 'الکل ضد عفونی کننده'),
+              image: 'الکل',
+              Price: '14,000',
+              name: 'الکل ضد عفونی کننده',
+            ),
             getpost(
                 image: 'تیشرت', Price: '155,000', name: 'تیشرت مردانه زیبا'),
             SizedBox(
