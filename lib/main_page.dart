@@ -173,20 +173,18 @@ class Main_page extends StatelessWidget {
   }
 
   Widget _icons() {
-    var list = ['i1', 'i2', 'i3', 'i4', 'i5', 'i6', 'i7'];
+    var list = ['i1', 'i2', 'i3', 'i4', 'i5', 'i6'];
     return Wrap(
-      alignment: WrapAlignment.end,
+      alignment: WrapAlignment.center,
       runSpacing: 15,
       spacing: 26,
       children: [
         for (var i in list)
-          Card(
-            child: Container(
-              width: 60,
-              height: 60,
-              child: Image(
-                image: AssetImage('images/$i.png'),
-              ),
+          Container(
+            width: 60,
+            height: 60,
+            child: Image(
+              image: AssetImage('images/$i.png'),
             ),
           )
       ],
