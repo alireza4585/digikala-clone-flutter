@@ -91,19 +91,19 @@ class Main_page extends StatelessWidget {
           child: Row(children: [
             getpost(
               image: 'کوله',
-              Price: '120,000',
+              Price: 120000,
               name: 'کوله پشتی ',
               takfif: 20,
             ),
             getpost(
               image: 'الکل',
-              Price: '14,000',
+              Price: 14000,
               name: 'الکل ضد عفونی کننده',
               takfif: 26,
             ),
             getpost(
               image: 'تیشرت',
-              Price: '155,000',
+              Price: 155000,
               name: 'تیشرت مردانه زیبا',
               takfif: 35,
             ),

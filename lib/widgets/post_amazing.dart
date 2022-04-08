@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget getpost(
-    {required var image,
-    required var Price,
-    required var name,
-    required var takfif}) {
+Widget getpost({
+  required var image,
+  required int Price,
+  required var name,
+  required int takfif,
+}) {
+  var a = takfifee(takfif, Price);
   return TextButton(
     onPressed: () {},
     child: Card(
@@ -40,7 +42,7 @@ Widget getpost(
               ),
               SizedBox(width: 2),
               Text(
-                '$Price',
+                '${a.toStringAsFixed(0)}',
                 style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
@@ -68,8 +70,19 @@ Widget getpost(
               ),
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(width: 20),
+              Text('$Price'),
+            ],
+          )
         ],
       ),
     ),
   );
+}
+
+double takfifee(takfife, Pricee) {
+  return Pricee - (takfife * Pricee / 100);
 }
