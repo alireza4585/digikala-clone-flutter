@@ -73,8 +73,11 @@ Widget getpost({
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(width: 20),
-              Text('$Price'),
+              Text(
+                '$Price',
+                style: TextStyle(fontSize: 15),
+              ),
+              SizedBox(width: 30),
             ],
           )
         ],
