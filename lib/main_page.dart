@@ -1,9 +1,18 @@
 import 'package:digikala/widgets/post_amazing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:digikala/product/screen_prodact.dart';
 
 class Main_page extends StatelessWidget {
   const Main_page({Key? key}) : super(key: key);
+
+  void navigat(BuildContext context, Widget n) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (BuildContext context) {
+        return n;
+      }),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,23 +99,23 @@ class Main_page extends StatelessWidget {
       child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(children: [
-            getpost(
-              image: 'کوله',
-              Price: 120000,
-              name: 'کوله پشتی ',
-              takfif: 20,
+            main_getpost(
+              imagee: 'کوله',
+              Pricee: 120000,
+              namee: 'کوله پشتی ',
+              takfife: 20,
             ),
-            getpost(
-              image: 'الکل',
-              Price: 14000,
-              name: 'الکل ضد عفونی کننده',
-              takfif: 26,
+            main_getpost(
+              imagee: 'الکل',
+              Pricee: 14000,
+              namee: 'الکل ضد عفونی کننده',
+              takfife: 26,
             ),
-            getpost(
-              image: 'تیشرت',
-              Price: 155000,
-              name: 'تیشرت مردانه زیبا',
-              takfif: 35,
+            main_getpost(
+              imagee: 'تیشرت',
+              Pricee: 155000,
+              namee: 'تیشرت مردانه زیبا',
+              takfife: 35,
             ),
             SizedBox(
               width: 20,
@@ -221,23 +230,23 @@ class Main_page extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            getpost(
-              image: 'بیس',
-              Price: 48000,
-              name: 'بیسکویت ',
-              takfif: 32,
+            main_getpost(
+              imagee: 'بیس',
+              Pricee: 48000,
+              namee: 'بیسکویت ',
+              takfife: 32,
             ),
-            getpost(
-              image: 'عسل',
-              Price: 338000,
-              name: 'عسل',
-              takfif: 56,
+            main_getpost(
+              imagee: 'عسل',
+              Pricee: 338000,
+              namee: 'عسل',
+              takfife: 56,
             ),
-            getpost(
-              image: 'کیک',
-              Price: 33900,
-              name: 'کیک',
-              takfif: 41,
+            main_getpost(
+              imagee: 'کیک',
+              Pricee: 33900,
+              namee: 'کیک',
+              takfife: 41,
             ),
             SizedBox(
               width: 20,
