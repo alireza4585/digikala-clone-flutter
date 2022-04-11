@@ -74,7 +74,8 @@ class Main_page extends StatelessWidget {
           _icons(),
           SizedBox(height: 12),
           _amazing(),
-          _icon2()
+          _icon2(),
+          _amazing_supper(),
         ],
       ),
     );
@@ -206,6 +207,82 @@ class Main_page extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+
+  Widget _amazing_supper() {
+    return Container(
+      width: double.infinity,
+      height:
+          400, ///////////////////////////////////////////////////////////////////
+      color: Colors.green,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            getpost(
+              image: 'بیس',
+              Price: 48000,
+              name: 'بیسکویت ',
+              takfif: 32,
+            ),
+            getpost(
+              image: 'عسل',
+              Price: 338000,
+              name: 'عسل',
+              takfif: 56,
+            ),
+            getpost(
+              image: 'کیک',
+              Price: 33900,
+              name: 'کیک',
+              takfif: 41,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Container(
+              color: Colors.green,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(padding: EdgeInsets.only(top: 15)),
+                  Text(
+                    'شگفت',
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'انگیز',
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'سوپرمارکتی',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: 150,
+                    height: 150,
+                    child: Image(image: AssetImage('images/shope.png')),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
