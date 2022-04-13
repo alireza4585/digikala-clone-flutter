@@ -1,15 +1,16 @@
 import 'package:digikala/product/screen_prodact.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class main_getpost extends StatelessWidget {
   String imagee;
-  int Pricee;
+  double Pricee;
   String namee;
-  int takfife;
+  double takfife;
   main_getpost(
       {Key? key,
       this.Pricee = 0,
-      this.imagee = '',
+      this.imagee = 'no',
       this.namee = '',
       this.takfife = 0})
       : super(key: key);
@@ -30,9 +31,9 @@ class main_getpost extends StatelessWidget {
 
 Widget getpost({
   required var image,
-  required int Price,
+  required double Price,
   required var name,
-  required int takfif,
+  required double takfif,
 }) {
   var a = takfifee(takfif, Price);
   return Card(
@@ -76,33 +77,35 @@ Widget getpost({
                   fontFamily: 'vazir'),
             ),
             SizedBox(width: 30),
-            Container(
-              alignment: Alignment.center,
-              width: 40,
-              height: 22,
-              child: Text(
-                '$takfif%',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 16,
+            if (takfif != 0)
+              Container(
+                alignment: Alignment.center,
+                width: 40,
+                height: 22,
+                child: Text(
+                  '${takfif.toInt()}%',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: Colors.red,
+                ),
               ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: Colors.red,
-              ),
-            ),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text(
-              '$Price',
-              style: TextStyle(fontSize: 15),
-            ),
+            if (takfif != 0)
+              Text(
+                '${Price.toInt()}',
+                style: TextStyle(fontSize: 15),
+              ),
             SizedBox(width: 30),
           ],
         )
@@ -111,6 +114,10 @@ Widget getpost({
   );
 }
 
-double takfifee(takfife, Pricee) {
-  return Pricee - (takfife * Pricee / 100);
+double takfifee(double takfife, double Pricee) {
+  if (takfife != 0) {
+    return Pricee - (takfife * Pricee / 100);
+  } else {
+    return Pricee;
+  }
 }

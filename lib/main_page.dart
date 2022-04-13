@@ -75,7 +75,6 @@ class Main_page extends StatelessWidget {
   Widget _getcolum() {
     return SingleChildScrollView(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(height: 12),
           _broshor(),
@@ -97,29 +96,10 @@ class Main_page extends StatelessWidget {
           400, ///////////////////////////////////////////////////////////////////
       color: Colors.red,
       child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(children: [
-            main_getpost(
-              imagee: 'کوله',
-              Pricee: 120000,
-              namee: 'کوله پشتی ',
-              takfife: 20,
-            ),
-            main_getpost(
-              imagee: 'الکل',
-              Pricee: 14000,
-              namee: 'الکل ضد عفونی کننده',
-              takfife: 26,
-            ),
-            main_getpost(
-              imagee: 'تیشرت',
-              Pricee: 155000,
-              namee: 'تیشرت مردانه زیبا',
-              takfife: 35,
-            ),
-            SizedBox(
-              width: 20,
-            ),
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            SizedBox(width: 20),
             Container(
               color: Colors.red,
               child: Column(
@@ -158,7 +138,33 @@ class Main_page extends StatelessWidget {
                 ],
               ),
             ),
-          ])),
+            main_getpost(
+              imagee: 'کوله',
+              Pricee: 120000,
+              namee: 'کوله پشتی ',
+              takfife: 20,
+            ),
+            main_getpost(
+              imagee: 'الکل',
+              Pricee: 14000,
+              namee: 'الکل ضد عفونی کننده',
+              takfife: 26,
+            ),
+            main_getpost(
+              imagee: 'تیشرت',
+              Pricee: 155000,
+              namee: 'تیشرت مردانه زیبا',
+              takfife: 35,
+            ),
+            main_getpost(
+              Pricee: 2000,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -230,27 +236,7 @@ class Main_page extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            main_getpost(
-              imagee: 'بیس',
-              Pricee: 48000,
-              namee: 'بیسکویت ',
-              takfife: 32,
-            ),
-            main_getpost(
-              imagee: 'عسل',
-              Pricee: 338000,
-              namee: 'عسل',
-              takfife: 56,
-            ),
-            main_getpost(
-              imagee: 'کیک',
-              Pricee: 33900,
-              namee: 'کیک',
-              takfife: 41,
-            ),
-            SizedBox(
-              width: 20,
-            ),
+            SizedBox(width: 20),
             Container(
               color: Colors.green,
               child: Column(
@@ -285,9 +271,30 @@ class Main_page extends StatelessWidget {
                     width: 150,
                     height: 150,
                     child: Image(image: AssetImage('images/shope.png')),
-                  )
+                  ),
                 ],
               ),
+            ),
+            main_getpost(
+              imagee: 'بیس',
+              Pricee: 48000,
+              namee: 'بیسکویت ',
+              takfife: 32,
+            ),
+            main_getpost(
+              imagee: 'عسل',
+              Pricee: 338000,
+              namee: 'عسل',
+              takfife: 56,
+            ),
+            main_getpost(
+              imagee: 'کیک',
+              Pricee: 33900,
+              namee: 'کیک',
+              takfife: 41,
+            ),
+            SizedBox(
+              width: 20,
             ),
           ],
         ),
