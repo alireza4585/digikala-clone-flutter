@@ -156,9 +156,6 @@ class Main_page extends StatelessWidget {
               namee: 'تیشرت مردانه زیبا',
               takfife: 35,
             ),
-            main_getpost(
-              Pricee: 2000,
-            ),
             SizedBox(
               width: 20,
             ),

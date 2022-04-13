@@ -1,5 +1,6 @@
 import 'package:digikala/product/screen_prodact.dart';
 import 'package:flutter/material.dart';
+import 'package:persian_number_utility/persian_number_utility.dart';
 
 // ignore: must_be_immutable
 class main_getpost extends StatelessWidget {
@@ -21,7 +22,12 @@ class main_getpost extends StatelessWidget {
         onPressed: () {
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (BuildContext context) {
-            return Scrren_Product();
+            return Scrren_Product(
+              ima: imagee,
+              Price: Pricee,
+              takfif: takfife,
+              nam: namee,
+            );
           }));
         },
         child: getpost(
@@ -69,7 +75,7 @@ Widget getpost({
             ),
             SizedBox(width: 2),
             Text(
-              '${a.toStringAsFixed(0)}',
+              '${a.toStringAsFixed(0).seRagham()}',
               style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w700,
@@ -103,7 +109,7 @@ Widget getpost({
           children: [
             if (takfif != 0)
               Text(
-                '${Price.toInt()}',
+                '${Price.toStringAsFixed(0).seRagham()}',
                 style: TextStyle(fontSize: 15),
               ),
             SizedBox(width: 30),
