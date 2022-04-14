@@ -158,7 +158,9 @@ class Main_page extends StatelessWidget {
               Pricee: 155000,
               namee: 'تیشرت مردانه زیبا',
               takfife: 35,
-              size11: 20,
+              size1: 20,
+              size2: 55,
+              size3: 63,
             ),
             SizedBox(
               width: 20,

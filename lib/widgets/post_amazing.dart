@@ -9,11 +9,11 @@ class main_getpost extends StatelessWidget {
   String namee;
   double takfife;
   double star;
-  int size11;
-  // int size2;
-  // int size3;
-  // int size4;
-  // int size5;
+  int size1;
+  int size2;
+  int size3;
+  int size4;
+  int size5;
   main_getpost({
     Key? key,
     this.Pricee = 0,
@@ -21,11 +21,11 @@ class main_getpost extends StatelessWidget {
     this.namee = '',
     this.takfife = 0,
     this.star = 0,
-    this.size11 = 0,
-    // this.size2 = 0,
-    // this.size3 = 0,
-    // this.size4 = 0,
-    // this.size5 = 0,
+    this.size1 = 0,
+    this.size2 = 0,
+    this.size3 = 0,
+    this.size4 = 0,
+    this.size5 = 0,
   }) : super(key: key);
 
   @override
@@ -40,11 +40,11 @@ class main_getpost extends StatelessWidget {
               takfif: takfife,
               nam: namee,
               star: star,
-              size1: size11,
-              // size2: size2,
-              // size3: size3,
-              // size4: size4,
-              // size5: size5,
+              size1: size1,
+              size2: size2,
+              size3: size3,
+              size4: size4,
+              size5: size5,
             );
           }));
         },

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:digikala/main_page.dart';
+import 'package:digikala/product/on.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -16,21 +17,29 @@ class Scrren_Product extends StatelessWidget {
   int size3;
   int size4;
   int size5;
-  Color color;
-  Scrren_Product(
-      {Key? key,
-      this.ima = 'no',
-      this.Price = 0,
-      this.nam = '',
-      this.takfif = 0,
-      this.star = 0,
-      this.size1 = 0,
-      this.size2 = 0,
-      this.size3 = 0,
-      this.size4 = 0,
-      this.size5 = 0,
-      this.color = Colors.amberAccent})
-      : super(key: key);
+  String color1;
+  String color2;
+  String color3;
+  String color4;
+  String color5;
+  Scrren_Product({
+    Key? key,
+    this.ima = 'no',
+    this.Price = 0,
+    this.nam = '',
+    this.takfif = 0,
+    this.star = 0,
+    this.size1 = 0,
+    this.size2 = 0,
+    this.size3 = 0,
+    this.size4 = 0,
+    this.size5 = 0,
+    this.color1 = '',
+    this.color2 = '',
+    this.color3 = '',
+    this.color4 = '',
+    this.color5 = '',
+  }) : super(key: key);
   void navigat(BuildContext context, Widget n) {
     Navigator.of(context).pop(
       MaterialPageRoute(builder: (BuildContext context) {
@@ -39,8 +48,6 @@ class Scrren_Product extends StatelessWidget {
     );
   }
 
-  double value_padding = 10;
-  List a = [45, 56];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -96,9 +103,8 @@ class Scrren_Product extends StatelessWidget {
   }
 
   Widget one() {
-    // while (size1 != 0) {
-    //   a.add(size1);
-    // }
+    List a = aa(size1, size2, size3, size4, size5);
+    List c = cc(color1, color2, color3, color4, color5);
     return Container(
       width: double.infinity,
       child: Column(
@@ -120,7 +126,7 @@ class Scrren_Product extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Padding(
-            padding: EdgeInsets.only(bottom: value_padding),
+            padding: EdgeInsets.only(bottom: corect_padding()),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -137,31 +143,57 @@ class Scrren_Product extends StatelessWidget {
               ],
             ),
           ),
-          Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              // for (var item in a)
-              Padding(
-                padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Container(
-                    width: 42,
-                    height: 28,
-                    alignment: Alignment.center,
-                    color: Colors.grey[300],
-                    child: Text('$size1', textAlign: TextAlign.center),
+          if (a.length != 0 || c.length != 0) Divider(),
+          if (a.length != 0)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                for (var item in a)
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        width: 42,
+                        height: 28,
+                        alignment: Alignment.center,
+                        color: Colors.grey[300],
+                        child: Text('$item', textAlign: TextAlign.center),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          )
+              ],
+            ),
+          if (c.length != 0)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                for (var item in c)
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        width: 42,
+                        height: 28,
+                        alignment: Alignment.center,
+                        color: Colors.grey[300],
+                        child: Text('$item', textAlign: TextAlign.center),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
         ],
       ),
     );
   }
-}
-List sizee(){
-  while()
+
+  double corect_padding() {
+    if (size1 != 0) {
+      return 0;
+    } else {
+      return 10;
+    }
+  }
 }
