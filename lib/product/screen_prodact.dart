@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:digikala/main_page.dart';
 import 'package:digikala/product/on.dart';
 import 'package:flutter/material.dart';
@@ -94,6 +93,7 @@ class Scrren_Product extends StatelessWidget {
             child: Column(
               children: [
                 one(),
+                Space(),
               ],
             ),
           ),
@@ -103,6 +103,7 @@ class Scrren_Product extends StatelessWidget {
   }
 
   Widget one() {
+    Color sid = Colors.white;
     List a = aa(size1, size2, size3, size4, size5);
     List c = cc(color1, color2, color3, color4, color5);
     return Container(
@@ -151,17 +152,28 @@ class Scrren_Product extends StatelessWidget {
                 for (var item in a)
                   Padding(
                     padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        width: 42,
-                        height: 28,
-                        alignment: Alignment.center,
-                        color: Colors.grey[300],
-                        child: Text('$item', textAlign: TextAlign.center),
+                    child: OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          elevation: 2.2,
+                          fixedSize: Size(27, 37),
+                          side: BorderSide(color: sid),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50))),
+                      child: Text(
+                        '$item',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.black),
                       ),
                     ),
                   ),
+                SizedBox(width: 10),
+                Text(
+                  ':سایز',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 10)
               ],
             ),
           if (c.length != 0)
@@ -170,22 +182,39 @@ class Scrren_Product extends StatelessWidget {
               children: [
                 for (var item in c)
                   Padding(
-                    padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        width: 42,
-                        height: 28,
-                        alignment: Alignment.center,
-                        color: Colors.grey[300],
-                        child: Text('$item', textAlign: TextAlign.center),
-                      ),
+                    padding: EdgeInsets.fromLTRB(5, 0, 5, 5),
+                    child: OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          elevation: 2.2,
+                          fixedSize: Size(27, 37),
+                          side: BorderSide(color: sid),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50))),
+                      child: Text('$item',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.black)),
                     ),
                   ),
+                SizedBox(width: 10),
+                Text(
+                  ':رنگ',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 10)
               ],
             ),
         ],
       ),
+    );
+  }
+
+  Widget Space() {
+    return Container(
+      width: double.infinity,
+      height: 10,
+      color: Colors.grey[300],
     );
   }
 

@@ -14,6 +14,11 @@ class main_getpost extends StatelessWidget {
   int size3;
   int size4;
   int size5;
+  String color1;
+  String color2;
+  String color3;
+  String color4;
+  String color5;
   main_getpost({
     Key? key,
     this.Pricee = 0,
@@ -26,6 +31,11 @@ class main_getpost extends StatelessWidget {
     this.size3 = 0,
     this.size4 = 0,
     this.size5 = 0,
+    this.color1 = '',
+    this.color2 = '',
+    this.color3 = '',
+    this.color4 = '',
+    this.color5 = '',
   }) : super(key: key);
 
   @override
@@ -45,6 +55,11 @@ class main_getpost extends StatelessWidget {
               size3: size3,
               size4: size4,
               size5: size5,
+              color1: color1,
+              color2: color2,
+              color3: color3,
+              color4: color4,
+              color5: color5,
             );
           }));
         },

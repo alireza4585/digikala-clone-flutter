@@ -144,6 +144,7 @@ class Main_page extends StatelessWidget {
               Pricee: 120000,
               namee: 'کوله پشتی ',
               takfife: 20,
+              color1: 'red',
             ),
             main_getpost(
               star: 4,
