@@ -8,13 +8,25 @@ class main_getpost extends StatelessWidget {
   double Pricee;
   String namee;
   double takfife;
-  main_getpost(
-      {Key? key,
-      this.Pricee = 0,
-      this.imagee = 'no',
-      this.namee = '',
-      this.takfife = 0})
-      : super(key: key);
+  double star;
+  int size11;
+  // int size2;
+  // int size3;
+  // int size4;
+  // int size5;
+  main_getpost({
+    Key? key,
+    this.Pricee = 0,
+    this.imagee = 'no',
+    this.namee = '',
+    this.takfife = 0,
+    this.star = 0,
+    this.size11 = 0,
+    // this.size2 = 0,
+    // this.size3 = 0,
+    // this.size4 = 0,
+    // this.size5 = 0,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +39,21 @@ class main_getpost extends StatelessWidget {
               Price: Pricee,
               takfif: takfife,
               nam: namee,
+              star: star,
+              size1: size11,
+              // size2: size2,
+              // size3: size3,
+              // size4: size4,
+              // size5: size5,
             );
           }));
         },
         child: getpost(
-            image: imagee, Price: Pricee, name: namee, takfif: takfife));
+          image: imagee,
+          Price: Pricee,
+          name: namee,
+          takfif: takfife,
+        ));
   }
 }
 

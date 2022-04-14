@@ -139,22 +139,26 @@ class Main_page extends StatelessWidget {
               ),
             ),
             main_getpost(
+              star: 3.2,
               imagee: 'کوله',
               Pricee: 120000,
               namee: 'کوله پشتی ',
               takfife: 20,
             ),
             main_getpost(
+              star: 4,
               imagee: 'الکل',
               Pricee: 14000,
               namee: 'الکل ضد عفونی کننده',
               takfife: 26,
             ),
             main_getpost(
+              star: 5,
               imagee: 'تیشرت',
               Pricee: 155000,
               namee: 'تیشرت مردانه زیبا',
               takfife: 35,
+              size11: 20,
             ),
             SizedBox(
               width: 20,
