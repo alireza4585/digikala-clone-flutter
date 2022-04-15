@@ -310,32 +310,35 @@ class Scrren_Product extends StatelessWidget {
             ],
           ),
           Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Row(
-                children: [
-                  Text(
-                    'امتیاز در دیجی کلاب دریافت می کنید ',
-                    style: TextStyle(fontSize: 18),
-                    textAlign: TextAlign.end,
-                  ),
-                  SizedBox(width: 3),
-                  Text(
-                    '$coin',
-                    style: TextStyle(fontSize: 18),
-                    textAlign: TextAlign.end,
-                  ),
-                ],
-              ),
-              SizedBox(width: 22),
-              Icon(
-                Icons.circle,
-                size: 30,
-                color: Colors.amber,
-              ),
-              SizedBox(width: 20),
-            ],
+          Padding(
+            padding: EdgeInsets.only(bottom: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'امتیاز در دیجی کلاب دریافت می کنید ',
+                      style: TextStyle(fontSize: 18),
+                      textAlign: TextAlign.end,
+                    ),
+                    SizedBox(width: 3),
+                    Text(
+                      '$coin',
+                      style: TextStyle(fontSize: 18),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                ),
+                SizedBox(width: 22),
+                Icon(
+                  Icons.circle,
+                  size: 30,
+                  color: Colors.amber,
+                ),
+                SizedBox(width: 20),
+              ],
+            ),
           ),
         ],
       ),
