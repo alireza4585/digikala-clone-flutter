@@ -145,6 +145,9 @@ class Main_page extends StatelessWidget {
               namee: 'کوله پشتی ',
               takfife: 20,
               color1: 'red',
+              informathion_seller: 'کیف برتر',
+              amlkard: 'عالی',
+              coin: '22',
             ),
             main_getpost(
               star: 4,
