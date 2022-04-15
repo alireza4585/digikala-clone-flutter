@@ -3,6 +3,7 @@ import 'package:digikala/main_page.dart';
 import 'package:digikala/product/on.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'constans_def.dart';
 
 // ignore: must_be_immutable
 class Scrren_Product extends StatelessWidget {
@@ -99,9 +100,9 @@ class Scrren_Product extends StatelessWidget {
             child: Column(
               children: [
                 one(),
-                Space(),
+                space(),
                 Seller(),
-                Space(),
+                space(),
               ],
             ),
           ),
@@ -215,14 +216,6 @@ class Scrren_Product extends StatelessWidget {
             ),
         ],
       ),
-    );
-  }
-
-  Widget Space() {
-    return Container(
-      width: double.infinity,
-      height: 10,
-      color: Colors.grey[300],
     );
   }
 
@@ -347,16 +340,5 @@ class Scrren_Product extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  Color amalkad_color = Colors.black;
-  Color am_c(String n) {
-    if (n == 'عالی') {
-      return amalkad_color = Colors.green;
-    } else if (n == 'متوسط') {
-      return amalkad_color = Colors.yellow;
-    } else {
-      return amalkad_color = Colors.red;
-    }
   }
 }
