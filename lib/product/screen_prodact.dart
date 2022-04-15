@@ -132,6 +132,7 @@ class Scrren_Product extends StatelessWidget {
                 '$nam',
                 style: TextStyle(fontSize: 25, color: Colors.black),
               ),
+              SizedBox(width: 17),
             ],
           ),
           SizedBox(height: 10),
