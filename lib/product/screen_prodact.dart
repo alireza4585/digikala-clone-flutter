@@ -130,7 +130,11 @@ class Scrren_Product extends StatelessWidget {
             children: [
               Text(
                 '$nam',
-                style: TextStyle(fontSize: 25, color: Colors.black),
+                textAlign: TextAlign.end,
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.black,
+                ),
               ),
               SizedBox(width: 17),
             ],
@@ -248,6 +252,7 @@ class Scrren_Product extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     '$informathion_seller',
@@ -266,11 +271,11 @@ class Scrren_Product extends StatelessWidget {
                         ':عملکرد',
                         style: TextStyle(fontSize: 18, color: Colors.grey[500]),
                       ),
-                      SizedBox(width: 17),
                     ],
                   ),
                 ],
               ),
+              SizedBox(width: 17),
               Icon(Icons.store, size: 38),
               SizedBox(width: 20),
             ],
