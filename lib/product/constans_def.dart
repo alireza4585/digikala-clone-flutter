@@ -18,3 +18,11 @@ Color am_c(String n) {
     return amalkad_color = Colors.red;
   }
 }
+
+bool f(List a) {
+  if (a.length != 0) {
+    return true;
+  } else {
+    return false;
+  }
+}

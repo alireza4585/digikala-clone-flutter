@@ -24,6 +24,7 @@ class Main_page extends StatelessWidget {
 
   PreferredSizeWidget _getappbar() {
     return AppBar(
+      automaticallyImplyLeading: false,
       backgroundColor: Colors.white,
       title: Row(
         children: [

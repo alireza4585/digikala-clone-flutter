@@ -1,5 +1,5 @@
-import 'dart:io';
 import 'package:digikala/main_page.dart';
+import 'package:digikala/product/commint_main.dart';
 import 'package:digikala/product/on.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -54,6 +54,14 @@ class Scrren_Product extends StatelessWidget {
     );
   }
 
+  void navigat_pu(BuildContext context, Widget n) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (BuildContext context) {
+        return n;
+      }),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -62,7 +70,6 @@ class Scrren_Product extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          automaticallyImplyLeading: (Platform.isAndroid) ? true : false,
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [
@@ -103,6 +110,7 @@ class Scrren_Product extends StatelessWidget {
                 space(),
                 Seller(),
                 space(),
+                comment_main(),
               ],
             ),
           ),
@@ -237,6 +245,7 @@ class Scrren_Product extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
+          SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
