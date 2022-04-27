@@ -1,6 +1,7 @@
 import 'package:digikala/main_page.dart';
 import 'main_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() {
   runApp(const MyApp());
