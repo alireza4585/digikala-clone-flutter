@@ -4,7 +4,6 @@ import 'package:digikala/bottom%20app%20bar/shooping_basket.dart';
 import 'package:digikala/widgets/post_amazing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:digikala/product/screen_prodact.dart';
 
 class Main_page extends StatefulWidget {
   const Main_page({Key? key}) : super(key: key);
@@ -24,10 +23,14 @@ class _Main_pageState extends State<Main_page> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _getappbar(),
-      bottomNavigationBar: _getbottombar(),
-      body: SafeArea(child: _getcolum()),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'vazir'),
+      home: Scaffold(
+        appBar: _getappbar(),
+        bottomNavigationBar: _getbottombar(),
+        body: SafeArea(child: _getcolum()),
+      ),
     );
   }
 

@@ -1,5 +1,4 @@
-import 'package:digikala/main_page.dart';
-import 'main_page.dart';
+import 'package:digikala/Loginpage/1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'vazir'),
-        home: Main_page());
+        home: Login());
   }
 }
