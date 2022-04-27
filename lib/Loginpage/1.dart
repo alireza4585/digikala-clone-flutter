@@ -43,11 +43,11 @@ class _LoginState extends State<Login> {
               'جهت ورود یا ثبت نام شماره ی خود را وارد کنید',
               style: TextStyle(
                 color: Colors.black,
-                fontWeight: FontWeight.bold,
+                // fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 20),
             Container(
               alignment: Alignment.center,
               child: TextField(
