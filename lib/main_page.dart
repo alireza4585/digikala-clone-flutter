@@ -1,11 +1,19 @@
+import 'package:digikala/bottom%20app%20bar/digikala%20man.dart';
+import 'package:digikala/bottom%20app%20bar/group.dart';
+import 'package:digikala/bottom%20app%20bar/shooping_basket.dart';
 import 'package:digikala/widgets/post_amazing.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:digikala/product/screen_prodact.dart';
 
-class Main_page extends StatelessWidget {
+class Main_page extends StatefulWidget {
   const Main_page({Key? key}) : super(key: key);
 
+  @override
+  State<Main_page> createState() => _Main_pageState();
+}
+
+class _Main_pageState extends State<Main_page> {
   void navigat(BuildContext context, Widget n) {
     Navigator.of(context).push(
       MaterialPageRoute(builder: (BuildContext context) {
@@ -18,7 +26,63 @@ class Main_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _getappbar(),
+      bottomNavigationBar: _getbottombar(),
       body: SafeArea(child: _getcolum()),
+    );
+  }
+
+  Widget _getbottombar() {
+    return BottomAppBar(
+      color: Colors.white,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+            child: IconButton(
+              onPressed: () {
+                navigat(context, digikalaman());
+              },
+              icon: Icon(
+                Icons.person,
+                size: 30,
+              ),
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.play_arrow,
+              size: 30,
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+              navigat(context, shopping_basket());
+            },
+            icon: Icon(
+              Icons.shopping_basket,
+              size: 30,
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+              navigat(context, group());
+            },
+            icon: Icon(
+              Icons.category,
+              size: 30,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.home,
+              size: 30,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
