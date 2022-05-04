@@ -1,3 +1,4 @@
+import 'package:digikala/constans/bottemappbar.dart';
 import 'package:flutter/material.dart';
 
 class shopping_basket extends StatefulWidget {
@@ -11,7 +12,9 @@ class _shopping_basketState extends State<shopping_basket> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        bottomNavigationBar: getbottom(),
         appBar: AppBar(),
         body: Center(
           child: Text('hello shopping basket'),

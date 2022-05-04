@@ -1,3 +1,4 @@
+import 'package:digikala/constans/bottemappbar.dart';
 import 'package:flutter/material.dart';
 
 class group extends StatefulWidget {
@@ -11,7 +12,9 @@ class _groupState extends State<group> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        bottomNavigationBar: getbottom(),
         appBar: AppBar(
           automaticallyImplyLeading: true,
           iconTheme: IconThemeData(color: Colors.red),

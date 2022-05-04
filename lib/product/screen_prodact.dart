@@ -4,6 +4,7 @@ import 'package:digikala/product/on.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'constans_def.dart';
+import 'package:persian_number_utility/persian_number_utility.dart';
 
 // ignore: must_be_immutable
 class Scrren_Product extends StatelessWidget {
@@ -64,10 +65,50 @@ class Scrren_Product extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var a = takfifee(takfif, Price);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'vazir'),
       home: Scaffold(
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                'تومان',
+                style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                    fontFamily: 'vazir'),
+              ),
+              SizedBox(width: 2),
+              Text(
+                '${a.toStringAsFixed(0).seRagham()}',
+                style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                    fontFamily: 'vazir'),
+              ),
+              SizedBox(width: 100),
+              Padding(
+                padding: EdgeInsets.all(4),
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                      primary: Colors.white, backgroundColor: Colors.red),
+                  child: Text(
+                    'افزودن به سبد خرید',
+                    style: TextStyle(fontWeight: FontWeight.w700),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+              SizedBox(width: 12),
+            ],
+          ),
+        ),
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -358,5 +399,13 @@ class Scrren_Product extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  double takfifee(double takfife, double Pricee) {
+    if (takfife != 0) {
+      return Pricee - (takfife * Pricee / 100);
+    } else {
+      return Pricee;
+    }
   }
 }
